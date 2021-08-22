@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "PriorityQueue.h"
 
 enum VisitMode {Visited, NotVisited};
 

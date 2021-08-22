@@ -4,23 +4,23 @@
 #include <malloc.h>
 #include "Graph.h"
 
-typedef Vertex* DataType;
+typedef Vertex* QDataType;
 
 typedef struct _Node {
-	DataType Data;
+	QDataType Data;
 	struct Node* Rear;
-} Node;
+} QNode;
 
 typedef struct _LinkedQueue {
-	Node* First;
-	Node* Last;
+	QNode* First;
+	QNode* Last;
 	int Count;
 } LinkedQueue;
 
 LinkedQueue* LQ_CreateQueue();
-Node* LQ_CreateNode(DataType Data);
-void LQ_Enqueue(LinkedQueue* Q, Node* NewData);
-Node* LQ_Dequeue(LinkedQueue* Q);
+QNode* LQ_CreateNode(QDataType Data);
+void LQ_Enqueue(LinkedQueue* Q, QNode* NewData);
+QNode* LQ_Dequeue(LinkedQueue* Q);
 void LQ_DestroyQueue(LinkedQueue* Q);
 
 #endif // LINKED_LIST_QUEUE_H

@@ -5,6 +5,6 @@
 #include "LinkedListQueue.h"
 
 void DFS(Vertex* V);
-void BFS(Vertex* V, LinkedQueue* Q);
+void BFS(Vertex* V);
 
 #endif // GRAPH_TRAVERSAL_H

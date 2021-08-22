@@ -8,15 +8,15 @@ LinkedQueue* LQ_CreateQueue() {
 	return NewQ;
 }
 
-Node* LQ_CreateNode(DataType Data) {
-	Node* NewNode = (Node*)malloc(sizeof(Node));
+QNode* LQ_CreateNode(QDataType Data) {
+	QNode* NewNode = (QNode*)malloc(sizeof(QNode));
 	NewNode->Data = Data;
 	NewNode->Rear = NULL;
 
 	return NewNode;
 }
 
-void LQ_Enqueue(LinkedQueue* Q, Node* NewData) {
+void LQ_Enqueue(LinkedQueue* Q, QNode* NewData) {
 	if (Q->First == NULL)
 		Q->First = NewData;
 	else
@@ -25,8 +25,8 @@ void LQ_Enqueue(LinkedQueue* Q, Node* NewData) {
 	Q->Count++;
 }
 
-Node* LQ_Dequeue(LinkedQueue* Q) {
-	Node* Popped = Q->First;
+QNode* LQ_Dequeue(LinkedQueue* Q) {
+	QNode* Popped = Q->First;
 	Q->First = Q->First->Rear;
 
 	Q->Count--;
@@ -35,7 +35,7 @@ Node* LQ_Dequeue(LinkedQueue* Q) {
 }
 
 void LQ_DestroyQueue(LinkedQueue* Q) {
-	Node* F = Q->First, * S;
+	QNode* F = Q->First, * S;
 	while (F != NULL) {
 		S = F;
 		F = F->Rear;
