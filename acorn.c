@@ -80,7 +80,7 @@ int main() {
 	for (i = 0; i < N; i++)
 		scanf("%s", map[i]);
 
-	// ±âÃÊ ¼¼ÆÃ / ³ëµå ÇÒ´ç / ¿µ¿ª °³¼ö / µµÅä¸® °³¼ö
+	// ê¸°ì´ˆ ì„¸íŒ… / ë…¸ë“œ í• ë‹¹ / ì˜ì—­ ê°œìˆ˜ / ë„í† ë¦¬ ê°œìˆ˜
 	Node** graph = (Node**)malloc(sizeof(Node*) * (N + 1));
 	for (i = 0; i < N; i++) {
 		int cur_idx = 0;
@@ -122,7 +122,7 @@ int main() {
 	}
 #endif
 
-	// °£¼± ¸¸µé±â
+	// ê°„ì„  ë§Œë“¤ê¸°
 	for (i = 0; i < N - 1; i++) {
 		Node* node_list = graph[i];
 		Line** line = &node_list->line;
